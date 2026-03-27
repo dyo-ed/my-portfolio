@@ -1,0 +1,19 @@
+{
+  "header": {
+    "brand": "DYO.ED",
+    "homeLabel": "HOME",
+    "clockLocale": "en-US",
+    "navItems": [
+      { "id": "projects", "label": "PROJECTS" },
+      { "id": "services", "label": "SERVICES" },
+      { "id": "blog",     "label": "BLOG"     },
+      { "id": "about",    "label": "ABOUT"    },
+      { "id": "contact",  "label": "CONTACT"  }
+    ]
+  },
+  "footer": {
+    "signature": "DYO.ED © 2026",
+    "tagline": "DEFY YOUR ODDS",
+    "cursorGlyph": "_"
+  }
+}
