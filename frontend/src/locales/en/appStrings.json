@@ -15,5 +15,17 @@
     "signature": "DYO.ED © 2026",
     "tagline": "DEFY YOUR ODDS",
     "cursorGlyph": "_"
+  },
+  "home": {
+    "statusLabel": "Desktop / Mobile / Web",
+    "heroLine1": "SOFTWARE",
+    "heroLine2": "ENGINEER",
+    "heroLine3": "& DREAMER",
+    "description": "I build systems that scale, interfaces that breathe, and abstractions that last. 6+ years turning complexity into clarity.",
+    "artifactLabel": "ARTIFACT_023 · CLASSICAL PERIOD",
+    "renderLabelLine1": "RENDER_MODE: 3D",
+    "renderLabelLine2": "c. 400 BC",
+    "marqueeText": "FULL-STACK · SYSTEMS · DISTRIBUTED · PERFORMANCE · OSS CONTRIBUTOR · ",
+    "marqueeRepeat": 6
   }
 }

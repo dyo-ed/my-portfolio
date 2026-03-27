@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap");
 
+/* Hide scrollbars globally, keep scrolling enabled */
+html,
+body {
+  -ms-overflow-style: none; /* IE and legacy Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none; /* Chrome, Safari, Opera */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -40,7 +54,8 @@ code {
 
 .app-content {
   flex: 1;
-  padding-top: 96px;
+  /* header is fixed at 56px height */
+  padding-top: 56px;
 }
 
 .app-content section {
@@ -78,6 +93,58 @@ code {
 .brand-link:hover {
   text-shadow: 0 0 8px #ffe60088;
   transform: translateY(-2px);
+}
+
+.footer-nav-link.nav-link {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #333;
+}
+
+.footer-nav-link.nav-link:hover,
+.footer-nav-link.nav-link.active {
+  color: #ffe600;
+  text-shadow: none;
+}
+
+.social-icon-link {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #1a1a1a;
+  background: transparent;
+  cursor: crosshair;
+  transition: color 0.1s, text-shadow 0.1s, transform 0.15s ease;
+}
+
+.social-icon-link + .social-icon-link {
+  margin-left: -1px; /* collapse borders: no visual gap */
+}
+
+.social-icon-link:hover {
+  background: #f0f0f0;
+  border-color: #f0f0f0;
+  color: #0a0a0a; /* icon uses currentColor */
+  text-shadow: none;
+  transform: translateY(-2px);
+}
+
+.social-icon-link svg {
+  display: block;
+}
+
+.selection-rect {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  border: 1px dashed rgba(255, 230, 0, 0.85);
+  background: rgba(255, 230, 0, 0.10);
+  box-shadow: 0 0 18px rgba(255, 230, 0, 0.12);
+  mix-blend-mode: screen;
 }
 .App {
   text-align: center;
@@ -140,5 +207,26 @@ code {
   100% {
     left: 140%;
     opacity: 0;
+  }
+}
+
+.marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee-scroll 22s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
