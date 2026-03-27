@@ -27,5 +27,24 @@
     "renderLabelLine2": "c. 400 BC",
     "marqueeText": "FULL-STACK · SYSTEMS · DISTRIBUTED · PERFORMANCE · OSS CONTRIBUTOR · ",
     "marqueeRepeat": 6
+  },
+  "contact": {
+    "sectionLabel": "// LET_S_TALK",
+    "titleLine1": "GOT A",
+    "titleHighlight": "PROBLEM",
+    "titleLine3": "TO SOLVE?",
+    "description": "I'm open to full-time roles, long-term contracts, and interesting consulting work. I don't do vague specs or waterfall timelines.",
+    "emailLabel": "EMAIL",
+    "githubLabel": "GITHUB",
+    "linkedinLabel": "LINKEDIN",
+    "sendMessageLabel": "SEND_MESSAGE()",
+    "fields": [
+      { "id": "yourName", "label": "YOUR_NAME" },
+      { "id": "yourEmail", "label": "YOUR_EMAIL" },
+      { "id": "subject", "label": "SUBJECT" }
+    ],
+    "messageLabel": "MESSAGE",
+    "messagePlaceholder": "// describe the problem",
+    "sendButtonLabel": "SEND \u2192"
   }
 }

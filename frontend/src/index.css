@@ -50,12 +50,60 @@ code {
   cursor: crosshair;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .app-content {
   flex: 1;
   /* header is fixed at 56px height */
   padding-top: 56px;
+}
+
+.stars-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  /* parallax control vars (set by JS) */
+  --px: 0;
+  --py: 0;
+}
+
+.stars-layer {
+  position: absolute;
+  inset: -4%;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Different depths: farther = smaller shift */
+.stars-layer-0 {
+  transform: translate3d(calc(var(--px) * 2px), calc(var(--py) * 2px), 0);
+  opacity: 0.7;
+}
+.stars-layer-1 {
+  transform: translate3d(calc(var(--px) * 5px), calc(var(--py) * 5px), 0);
+  opacity: 0.85;
+}
+.stars-layer-2 {
+  transform: translate3d(calc(var(--px) * 8px), calc(var(--py) * 8px), 0);
+  opacity: 1;
+}
+
+.star {
+  position: absolute;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stars-layer-0,
+  .stars-layer-1,
+  .stars-layer-2 {
+    transform: none !important;
+  }
 }
 
 .app-content section {
@@ -228,5 +276,102 @@ code {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* ---- Portfolio UI primitives (buttons/inputs/labels) ---- */
+
+.section-label {
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: #ffe600;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #ffe600;
+  color: #0a0a0a;
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding: 14px 32px;
+  border: none;
+  cursor: crosshair;
+  transition: transform 0.15s, box-shadow 0.15s, background-color 0.15s, color 0.15s;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #fff;
+  color: #0a0a0a;
+  /* transform: translate(-3px, -3px); */
+  /* box-shadow: 3px 3px 0 #fff; */
+}
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: #f0f0f0;
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding: 14px 32px;
+  border: 2px solid #f0f0f0;
+  cursor: crosshair;
+  transition: transform 0.15s, box-shadow 0.15s, color 0.15s, border-color 0.15s;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 #ffe600;
+  color: #ffe600;
+  border-color: #ffe600;
+}
+
+.contact-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333;
+  color: #f0f0f0;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  padding: 12px 0;
+  outline: none;
+  transition: border-color 0.2s;
+  cursor: crosshair;
+}
+
+.contact-input:focus {
+  border-bottom-color: #ffe600;
+}
+
+.contact-input::placeholder {
+  color: #444;
+}
+
+/* Short viewports: keep the hero block from overlapping the bottom marquee. */
+@media (max-height: 650px) {
+  .home-left-col {
+    justify-content: center !important;
+    /* Give the hero block more usable vertical space. */
+    padding-bottom: clamp(32px, 6vh, 56px) !important;
+  }
+
+  .home-left-col > h1 {
+    line-height: 0.84 !important;
+    margin-bottom: clamp(8px, 1.4vh, 14px) !important;
+    /* Further cap height-driven scaling when there's not much vertical room. */
+    font-size: clamp(48px, min(11vw, 16vh), 140px) !important;
+  }
+
+  .home-left-col > p {
+    margin-bottom: clamp(10px, 1.7vh, 20px) !important;
   }
 }
