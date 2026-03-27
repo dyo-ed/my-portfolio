@@ -10,7 +10,8 @@ export default function HeaderView({
   return (
     <nav style={headerStyles.nav}>
       <button
-        onClick={() => onScrollTo("hero", header.homeLabel)}
+        onClick={() => onScrollTo("", header.homeLabel)}
+        className="brand-link"
         style={headerStyles.brandButton}
       >
         {header.brand}
