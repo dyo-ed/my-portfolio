@@ -1,5 +1,6 @@
 import type { FooterViewProps } from "./footerContract";
 import { footerStyles } from "../../../utils/constants/footerConstant";
+import { Link } from "react-router-dom";
 
 export default function FooterView({ footer }: FooterViewProps) {
   const icons = {
@@ -126,14 +127,14 @@ export default function FooterView({ footer }: FooterViewProps) {
           <span style={footerStyles.navTitle}>02/ SITEMAP</span>
           <div style={footerStyles.navLinks}>
             {sitemapLinks.map((l) => (
-              <a
+              <Link
                 key={l.label}
-                href={l.href}
+                to={l.href}
                 className="nav-link footer-nav-link"
                 style={footerStyles.navLink}
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
         </nav>
