@@ -18,6 +18,14 @@ export default function AppLayout() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, [location.key]);
 
+  React.useEffect(() => {
+    const onContextMenu = (e: MouseEvent) => {
+      e.preventDefault();
+    };
+    document.addEventListener("contextmenu", onContextMenu);
+    return () => document.removeEventListener("contextmenu", onContextMenu);
+  }, []);
+
   return (
     <div className="app-shell">
       {/* <StarsBackground /> */}
