@@ -8,18 +8,29 @@ type Rect = {
 };
 
 function isInteractiveTarget(target: EventTarget | null) {
-  if (!(target instanceof HTMLElement)) return false;
+  if (!target) return false;
 
-  const tag = target.tagName;
-  if (tag === "BUTTON") return true;
-  if (tag === "A") return true;
-  if (tag === "INPUT") return true;
-  if (tag === "TEXTAREA") return true;
-  if (tag === "SELECT") return true;
-  if (tag === "LABEL") return true;
+  // Resolve text nodes to their parent elements
+  let el = target as any;
+  if (el.nodeType === 3 && el.parentNode) {
+    el = el.parentNode;
+  }
 
-  if (target.isContentEditable) return true;
-  if (target.closest("button,a,input,textarea,select,[contenteditable='true']")) return true;
+  // If there's no closest function, we can't accurately check ancestry.
+  // We'll cautiously assume it's NOT a background to prevent accidentally enabling the box over weird nodes.
+  if (!el || typeof el.closest !== "function") return true;
+
+  const tag = el.tagName ? el.tagName.toUpperCase() : "";
+  if (tag === "BUTTON" || tag === "A" || tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || tag === "LABEL") {
+    return true;
+  }
+
+  if (el.isContentEditable) return true;
+
+  if (el.closest("button,a,input,textarea,select,[contenteditable='true']")) return true;
+
+  // Custom boundary to opt-out of dragging
+  if (el.closest("[data-prevent-selection]")) return true;
 
   return false;
 }

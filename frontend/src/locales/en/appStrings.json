@@ -4,11 +4,26 @@
     "homeLabel": "HOME",
     "clockLocale": "en-US",
     "navItems": [
-      { "id": "projects", "label": "PROJECTS" },
-      { "id": "services", "label": "SERVICES" },
-      { "id": "blog",     "label": "BLOG"     },
-      { "id": "about",    "label": "ABOUT"    },
-      { "id": "contact",  "label": "CONTACT"  }
+      {
+        "id": "projects",
+        "label": "PROJECTS"
+      },
+      {
+        "id": "services",
+        "label": "SERVICES"
+      },
+      {
+        "id": "blog",
+        "label": "BLOG"
+      },
+      {
+        "id": "about",
+        "label": "ABOUT"
+      },
+      {
+        "id": "contact",
+        "label": "CONTACT"
+      }
     ]
   },
   "footer": {
@@ -26,7 +41,92 @@
     "renderLabelLine1": "RENDER_MODE: 3D",
     "renderLabelLine2": "c. 400 BC",
     "marqueeText": "FULL-STACK · SYSTEMS · DISTRIBUTED · PERFORMANCE · OSS CONTRIBUTOR · ",
-    "marqueeRepeat": 6
+    "marqueeRepeat": 6,
+    "stats": {
+      "liveBadge": "LIVE",
+      "items": [
+        {
+          "id": "01",
+          "label": "PROJECTS\nDELIVERED",
+          "unit": "SHIPPED",
+          "description": "From zero to production"
+        },
+        {
+          "id": "02",
+          "label": "RESEARCH\nPAPERS",
+          "unit": "PUBLISHED",
+          "description": "Peer-reviewed & indexed"
+        },
+        {
+          "id": "03",
+          "label": "DAYS\nACTIVE",
+          "unit": "SINCE LAUNCH",
+          "description": "And still compiling"
+        }
+      ]
+    },
+    "workConnects": {
+      "sectionLabel": "// HOW_THIS_WORK_CONNECTS",
+      "headlineLine1": "BUILT FOR",
+      "headlineLine2": "DREAMERS WHO",
+      "headlineLine3": "NEED CLARITY",
+      "paragraph1": "The strongest work here starts with scope, moves into practical system design, and ends in something usable.",
+      "paragraph2": "The goal is not just to make interfaces look good. It is to build software that fits real operations, real users, and real constraints.",
+      "ctaExploreServices": "EXPLORE SERVICES",
+      "ctaBrowseProjects": "BROWSE PROJECTS",
+      "servicesHeader": "SERVICES",
+      "servicesCountLabel": "04 OFFERINGS",
+      "services": [
+        {
+          "id": "01",
+          "title": "Product Strategy & Scoping",
+          "desc": "Transforming your initial idea into a detailed, actionable blueprint.",
+          "tag": "DISCOVERY",
+          "to": "/services"
+        },
+        {
+          "id": "02",
+          "title": "Web Apps & Systems",
+          "desc": "Building powerful, scalable web applications and websites.",
+          "tag": "ENGINEERING",
+          "to": "/services"
+        },
+        {
+          "id": "03",
+          "title": "Native App Development",
+          "desc": "Building high-performance, platform-specific applications.",
+          "tag": "PLATFORM",
+          "to": "/services"
+        },
+        {
+          "id": "04",
+          "title": "Workflow Automation",
+          "desc": "Automating repetitive tasks for individuals and small businesses.",
+          "tag": "EFFICIENCY",
+          "to": "/services"
+        }
+      ]
+    },
+    "worksShowcase": {
+      "label": "// SELECTED_WORK",
+      "headingLine1": "THINGS I",
+      "headingLine2": "SHIPPED",
+      "subtext": "HOVER TO EXPAND · {count} PROJECTS",
+      "viewCta": "VIEW ↗"
+    },
+    "reviewsCarousel": {
+      "label": "// CLIENT_REVIEWS",
+      "headingLine1": "WHAT THEY",
+      "headingLine2": "SAY ABOUT",
+      "headingLine3": "THE WORK",
+      "reviewsCount": "{count} REVIEWS",
+      "avgRating": "5.0 AVG RATING"
+    },
+    "ctaSection": {
+      "headlineLine1": "LET'S",
+      "headlineLine2": "TALK",
+      "headlineLine3": "IDEAS."
+    }
   },
   "contact": {
     "sectionLabel": "// LET_S_TALK",
@@ -39,12 +139,21 @@
     "linkedinLabel": "LINKEDIN",
     "sendMessageLabel": "SEND_MESSAGE()",
     "fields": [
-      { "id": "yourName", "label": "YOUR_NAME" },
-      { "id": "yourEmail", "label": "YOUR_EMAIL" },
-      { "id": "subject", "label": "SUBJECT" }
+      {
+        "id": "yourName",
+        "label": "YOUR_NAME"
+      },
+      {
+        "id": "yourEmail",
+        "label": "YOUR_EMAIL"
+      },
+      {
+        "id": "subject",
+        "label": "SUBJECT"
+      }
     ],
     "messageLabel": "MESSAGE",
-    "messagePlaceholder": "// describe the problem",
+    "messagePlaceholder": "// describe_the_problem",
     "sendButtonLabel": "SEND \u2192"
   }
 }

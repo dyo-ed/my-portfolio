@@ -2,6 +2,11 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import GlitchText from "../../components/glitch_text/glitchText";
 import RomanBustScene from "../../components/roman_bust/RomanBustScene";
+import StatsCounter from "../../components/stats_counter/StatsCounter";
+import WorkConnectsSection from "../../components/work_connects/WorkConnectsSection";
+import WorksShowcase from "../../components/works_showcase/WorksShowcase";
+import ReviewsCarousel from "../../components/reviews_carousel/ReviewsCarousel";
+import CTASection from "../../components/cta_section/CTASection";
 import appStrings from "../../../locales/en/appStrings.json";
 import { homeStyles } from "../../../utils/constants/homeConstant";
 
@@ -9,6 +14,7 @@ export default function HomePage() {
   const { home } = appStrings;
   const location = useLocation();
   const animateKey = location.key || "home";
+
 
   const [isPhone, setIsPhone] = React.useState(false);
   const [hoveredCta, setHoveredCta] = React.useState<"viewWork" | "contact" | null>(null);
@@ -75,7 +81,7 @@ export default function HomePage() {
                 onMouseLeave={() => setHoveredCta(null)}
                 onFocus={() => setHoveredCta("viewWork")}
                 onBlur={() => setHoveredCta(null)}
-                onClick={() => {}}
+                onClick={() => { }}
               >
                 VIEW WORK
                 <svg
@@ -109,7 +115,7 @@ export default function HomePage() {
                 onMouseLeave={() => setHoveredCta(null)}
                 onFocus={() => setHoveredCta("contact")}
                 onBlur={() => setHoveredCta(null)}
-                onClick={() => {}}
+                onClick={() => { }}
               >
                 CONTACT
               </button>
@@ -154,9 +160,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section style={homeStyles.belowMarqueeSection}>
-        <div style={homeStyles.belowMarqueeInner} />
+      <section style={homeStyles.statsSection}>
+        <div style={homeStyles.statsSectionInner}>
+          <StatsCounter stats={home.stats} />
+        </div>
       </section>
+
+      <WorkConnectsSection workConnects={home.workConnects} />
+
+      <WorksShowcase />
+
+      <ReviewsCarousel />
+
+      <CTASection />
     </>
   );
 }  
