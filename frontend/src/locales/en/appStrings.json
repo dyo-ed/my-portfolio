@@ -155,5 +155,21 @@
     "messageLabel": "MESSAGE",
     "messagePlaceholder": "// describe_the_problem",
     "sendButtonLabel": "SEND \u2192"
+  },
+  "about": {
+    "gacha": {
+      "pullingLabel": "PULLING...",
+      "pullButtonLabel": "EXECUTE_PULL()",
+      "eyebrowLabel": "// FRAGMENT_ACQUISITION_PROTOCOL",
+      "titleLine1Prefix": "RANDOM",
+      "titleLine1Highlight": "FACTS",
+      "titleLine2": "ABOUT ME",
+      "placeholderGlyph": "?",
+      "awaitingInputLabel": "AWAITING_INPUT",
+      "cardHiddenName": "▓▓▓▓▓▓▓▓▓",
+      "cardHiddenType": "DECRYPTING...",
+      "cardTypeTemplate": "TYPE::{type}",
+      "cardHiddenFlavor": "/// CLASSIFIED ///"
+    }
   }
 }
