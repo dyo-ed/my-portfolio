@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import React from "react";
 
 export type GachaRarity = {
   id: string;
@@ -160,10 +161,51 @@ export const GACHA_FRAGMENTS: GachaFragment[] = [
   },
 ];
 
+export const PROFILE = {  
+  name: "JOED MERAÑA",
+  role: "SOFTWARE ENGINEER",
+  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+  imageMobile: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80",
+  description:
+    "I build systems that scale, interfaces that breathe, and abstractions that last. Six years turning complexity into clarity — from distributed databases to pixel-perfect UIs. I care deeply about craft, and I ship.",
+};
+
+export const ATTRIBUTES = [
+  { title: "FOCUS",    text: "Systems & full-stack" },
+  { title: "EXP",      text: "6+ years shipping" },
+  { title: "STYLE",    text: "No fluff, no bloat" },
+  { title: "APPROACH", text: "Readable, testable, durable" },
+  { title: "DOMAIN",   text: "Distributed systems" },
+  { title: "TIMEZONE", text: "UTC +8 · async-friendly" },
+];
+
+export const SOCIALS = [
+  {
+    label: "GitHub",
+    href: "https://github.com/alexdev",
+    id: "github",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/alexdev",
+    id: "linkedin",
+  },
+];
+
 export const aboutStyles: Record<string, CSSProperties> = {
   page: {
-    width: "100%",
+    width: "100",
     background: "#0a0a0a",
+  },
+  separator: {
+    position: "absolute",
+    left: 0,
+    bottom: 0,
+    width: "100%",
+    border: "none",
+    height: "1px",
+    backgroundColor: "rgba(255,255,255,0.08)",
+    zIndex: 160,
   },
   futureSection: {
     position: "relative",
@@ -224,4 +266,32 @@ export const aboutGachaCss = `
       rgba(0, 0, 0, 0.03) 4px
     );
   }
+`;
+
+export const ABOUT_STYLES = `
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  ::selection { background: #FFE600; color: #0a0a0a; }
+  @keyframes blink     { 0%,100%{opacity:1} 50%{opacity:0} }
+  @keyframes fadeUp    { from{transform:translateY(20px);opacity:0} to{transform:translateY(0);opacity:1} }
+  @keyframes imgReveal { from{clip-path:inset(100% 0 0 0);opacity:0} to{clip-path:inset(0% 0 0 0);opacity:1} }
+  .scanlines { position: fixed; inset: 0; pointer-events: none; z-index: 100; background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px); }
+  .about-grid { display: grid; grid-template-columns: minmax(240px, 380px) 1fr; gap: clamp(28px, 5vw, 72px); align-items: stretch; width: 100%; max-width: 1100px; }
+  @media (max-width: 760px) { .about-grid { grid-template-columns: 1fr; gap: 28px; } }
+  .img-frame { position: relative; width: 100%; height: 100%; overflow: hidden; border: 1px solid #222; }
+  .img-frame-mobile { position: relative; width: clamp(80px, 22vw, 110px); height: clamp(80px, 22vw, 110px); flex-shrink: 0; overflow: hidden; border: 1px solid #222; }
+  .img-frame img, .img-frame-mobile img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; filter: grayscale(15%) contrast(1.05); animation: imgReveal 0.8s cubic-bezier(0.77,0,0.175,1) 0.1s both; }
+  .img-corner { position: absolute; width: 20px; height: 20px; pointer-events: none; z-index: 2; }
+  .img-corner.tl { top:8px; left:8px; border-top:1px solid #FFE600; border-left:1px solid #FFE600; }
+  .img-corner.br { bottom:8px; right:8px; border-bottom:1px solid #FFE600; border-right:1px solid #FFE600; }
+  .img-scanlines { position: absolute; inset: 0; z-index: 1; pointer-events: none; background-image: repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.04) 3px,rgba(0,0,0,0.04) 4px); }
+  .info-col { display: flex; flex-direction: column; justify-content: space-between; animation: fadeUp 0.5s 0.15s both; }
+  .attr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1px; background: #1a1a1a; border: 1px solid #1a1a1a; }
+  .attr-item { background: #0a0a0a; padding: 13px 16px; transition: background 0.15s; cursor: crosshair; }
+  .attr-item:hover { background: #111; }
+  .social-btn { display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; border: 1px solid #2a2a2a; background: transparent; color: #666; cursor: crosshair; text-decoration: none; position: relative; overflow: hidden; transition: color 0.18s, border-color 0.18s, transform 0.18s, box-shadow 0.18s; flex-shrink: 0; }
+  .social-btn::before { content: ''; position: absolute; inset: 0; background: #FFE600; transform: scaleY(0); transform-origin: bottom; transition: transform 0.18s; z-index: 0; }
+  .social-btn:hover::before { transform: scaleY(1); }
+  .social-btn:hover { color: #0a0a0a; border-color: #FFE600; transform: translate(-2px, -2px); box-shadow: 2px 2px 0 #FFE600; }
+  .social-btn svg { position: relative; z-index: 1; }
 `;

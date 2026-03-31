@@ -11,6 +11,7 @@ export const headerStyles: Record<string, CSSProperties> = {
     background: "#0a0a0aee",
     backdropFilter: "blur(4px)",
     padding: "0 40px",
+    boxSizing: "border-box",
     height: 56,
     display: "flex",
     alignItems: "center",

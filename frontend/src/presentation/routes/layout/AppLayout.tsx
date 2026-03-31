@@ -1,4 +1,5 @@
 import React from "react";
+import BootAnimation from "../../components/boot/BootAnimation";
 import appStrings from "../../../locales/en/appStrings.json";
 import FooterView from "../../components/footer/footerView";
 import GlobalCursor from "../../components/cursor/GlobalCursor";
@@ -12,6 +13,14 @@ import { Outlet, useLocation } from "react-router-dom";
 export default function AppLayout() {
   const { activeSection, currentTime, onRouteTo } = useHeaderModel(appStrings.header);
   const location = useLocation();
+
+  const [showBoot, setShowBoot] = React.useState<boolean>(() => {
+    try {
+      return typeof window !== "undefined" && sessionStorage.getItem("bootPlayed") !== "1";
+    } catch {
+      return false;
+    }
+  });
 
   // Always scroll to top when navigating between pages.
   // (Prevents landing mid-page when you were previously scrolled down.)
@@ -29,6 +38,16 @@ export default function AppLayout() {
 
   return (
     <div className="app-shell">
+      {showBoot && (
+        <BootAnimation
+          onComplete={() => {
+            try {
+              sessionStorage.setItem("bootPlayed", "1");
+            } catch {}
+            setShowBoot(false);
+          }}
+        />
+      )}
       {/* <StarsBackground /> */}
       <GlobalCursor />
       <SelectionLayer />

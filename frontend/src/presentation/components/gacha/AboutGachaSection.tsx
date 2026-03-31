@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import appStrings from "../../../locales/en/appStrings.json";
+import GlitchText from "../glitch_text/glitchText";
 import {
   aboutGachaCss,
+  aboutStyles,
   GACHA_FRAGMENTS,
   GACHA_NOISE_CHARS,
   GACHA_RARITIES,
@@ -445,19 +447,6 @@ export default function AboutGachaSection() {
 
       <div className="about-gacha-scanlines" />
 
-      {flash && (
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            zIndex: 150,
-            pointerEvents: "none",
-            background: hexToRgba(flash.color, flash.alpha),
-            opacity: 0,
-            animation: "flashIn .6s ease-out both",
-          }}
-        />
-      )}
 
       <section
         style={{
@@ -470,6 +459,19 @@ export default function AboutGachaSection() {
           overflow: "hidden",
         }}
       >
+        {flash && (
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              zIndex: 150,
+              pointerEvents: "none",
+              background: hexToRgba(flash.color, flash.alpha),
+              opacity: 0,
+              animation: "flashIn .6s ease-out both",
+            }}
+          />
+        )}
         <div
           style={{
             position: "absolute",
@@ -516,11 +518,15 @@ export default function AboutGachaSection() {
                 marginBottom: 22,
               }}
             >
-              {gacha.titleLine1Prefix}{" "}
-              <span style={{ color: "#FFE600" }}>{gacha.titleLine1Highlight}</span>
+              <span>
+                <GlitchText text={`${gacha.titleLine1Prefix} `} animateOnMount />
+              </span>
+              <span style={{ color: "#FFE600" }}>
+                <GlitchText text={gacha.titleLine1Highlight} animateOnMount />
+              </span>
               <br />
               <span style={{ WebkitTextStroke: "1px #3a3a3a", color: "transparent" }}>
-                {gacha.titleLine2}
+                <GlitchText text={gacha.titleLine2} animateOnMount />
               </span>
             </h1>
 
@@ -628,6 +634,7 @@ export default function AboutGachaSection() {
               </div>
             ))}
         </div>
+        <hr style={aboutStyles.separator} />
       </section>
     </div>
   );

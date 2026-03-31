@@ -161,6 +161,17 @@ export default function HomePage() {
       </section>
 
       <section style={homeStyles.statsSection}>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            pointerEvents: "none",
+            backgroundImage:
+              "linear-gradient(#1a1a1a 1px,transparent 1px),linear-gradient(90deg,#1a1a1a 1px,transparent 1px)",
+            backgroundSize: "48px 48px",
+            opacity: 0.25,
+          }}
+        />
         <div style={homeStyles.statsSectionInner}>
           <StatsCounter stats={home.stats} />
         </div>

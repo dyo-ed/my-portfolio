@@ -491,11 +491,17 @@ export const homeStyles: Record<string, CSSProperties> = {
     width: "100%",
     background: "#0a0a0a",
     borderTop: "1px solid #1a1a1a",
+    color: "#f0f0f0",
+    fontFamily: "'Courier New', Courier, monospace",
+    cursor: "crosshair",
+    overflow: "hidden",
   },
   statsSectionInner: {
     width: "100%",
     padding: "clamp(32px, 6vw, 80px) clamp(24px, 6vw, 90px)",
     boxSizing: "border-box",
+    position: "relative",
+    zIndex: 1,
   },
   afterWorksShowcasePlaceholderSection: {
     position: "relative",
@@ -664,6 +670,7 @@ export const statsCounterCss = `
     padding: 40px 36px 36px;
     display: flex;
     flex-direction: column;
+    background: #0a0a0a;
     animation: statsFadeUp 0.7s both;
     animation-delay: var(--delay);
     /* Do not animate border-color — RGB interpolation flashes through light/white before yellow. */
@@ -815,6 +822,7 @@ export const workConnectsCss = `
 
 export const worksShowcaseStyles: Record<string, CSSProperties> = {
   section: {
+    position: "relative",
     background: "#0a0a0a",
     borderTop: "1px solid #1a1a1a",
     padding: "80px 40px",
@@ -826,6 +834,7 @@ export const worksShowcaseStyles: Record<string, CSSProperties> = {
     cursor: "crosshair",
   },
   header: {
+    position: "relative",
     display: "flex",
     flexDirection: "column",
     gap: 12,
@@ -851,6 +860,7 @@ export const worksShowcaseStyles: Record<string, CSSProperties> = {
     marginTop: 8,
   },
   strip: {
+    position: "relative",
     display: "flex",
     height: "clamp(420px, 58vh, 680px)",
     border: "1px solid #222",

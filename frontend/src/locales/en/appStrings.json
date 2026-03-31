@@ -160,7 +160,7 @@
     "gacha": {
       "pullingLabel": "PULLING...",
       "pullButtonLabel": "EXECUTE_PULL()",
-      "eyebrowLabel": "// FRAGMENT_ACQUISITION_PROTOCOL",
+      "eyebrowLabel": "// FRAGMENT_ACQUISITION",
       "titleLine1Prefix": "RANDOM",
       "titleLine1Highlight": "FACTS",
       "titleLine2": "ABOUT ME",
@@ -170,6 +170,20 @@
       "cardHiddenType": "DECRYPTING...",
       "cardTypeTemplate": "TYPE::{type}",
       "cardHiddenFlavor": "/// CLASSIFIED ///"
+    },
+    "me": {
+      "entityProfile": "// ENTITY_PROFILE",
+      "profileTxt": "PROFILE.TXT",
+      "attributesLabel": "// ATTRIBUTES",
+      "noiseChars": "!@#$%^&*<>/\\|{}[]~`"
     }
+  },
+  "boot": {
+    "initializing": "INITIALIZING",
+    "loadingAssets": "LOADING ASSETS",
+    "buildingInterface": "BUILDING INTERFACE",
+    "almostReady": "ALMOST READY",
+    "launching": "LAUNCHING",
+    "name": "DYO.ED"
   }
 }
