@@ -270,7 +270,7 @@ export const aboutGachaCss = `
 
 export const ABOUT_STYLES = `
   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&display=swap');
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  // *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   ::selection { background: #FFE600; color: #0a0a0a; }
   @keyframes blink     { 0%,100%{opacity:1} 50%{opacity:0} }
   @keyframes fadeUp    { from{transform:translateY(20px);opacity:0} to{transform:translateY(0);opacity:1} }
