@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 
 import AppLayout from "./layout/AppLayout";
 import AboutPage from "./pages/AboutPage";
@@ -19,6 +19,9 @@ export const appRouter = createBrowserRouter([
       { path: "blog", element: <BlogPage /> },
       { path: "about", element: <AboutPage /> },
       { path: "contact", element: <ContactPage /> },
+      
+      // Redirect unknown routes (404) back to HomePage.
+      { path: "*", element: <Navigate to="/" replace /> },
     ],
   },
 ]);

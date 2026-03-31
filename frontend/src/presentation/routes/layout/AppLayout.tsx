@@ -1,6 +1,7 @@
 import React from "react";
 import appStrings from "../../../locales/en/appStrings.json";
 import FooterView from "../../components/footer/footerView";
+import GlobalCursor from "../../components/cursor/GlobalCursor";
 import HeaderView from "../../components/header/headerView";
 import { useHeaderModel } from "../../components/header/headerModel";
 import SelectionLayer from "../../components/selection/selectionLayer";
@@ -29,6 +30,7 @@ export default function AppLayout() {
   return (
     <div className="app-shell">
       {/* <StarsBackground /> */}
+      <GlobalCursor />
       <SelectionLayer />
       <TabInputsOnly />
       <HeaderView
