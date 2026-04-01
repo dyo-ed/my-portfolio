@@ -176,6 +176,11 @@
       "profileTxt": "PROFILE.TXT",
       "attributesLabel": "// ATTRIBUTES",
       "noiseChars": "!@#$%^&*<>/\\|{}[]~`"
+    },
+    "credentials": {
+      "eyebrow": "// CERTIFICATIONS",
+      "heading": "CREDENTIALS",
+      "blinkCursor": "_"
     }
   },
   "boot": {

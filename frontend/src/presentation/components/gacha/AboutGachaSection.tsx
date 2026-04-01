@@ -420,7 +420,8 @@ export default function AboutGachaSection() {
 
     window.setTimeout(() => {
       const rarity = weightedRandom(GACHA_RARITIES);
-      const fragment = randItem(GACHA_FRAGMENTS);
+      const pool = GACHA_FRAGMENTS.filter((f) => f.rarity === rarity.id);
+      const fragment = randItem(pool.length > 0 ? pool : GACHA_FRAGMENTS);
       setResult({ rarity, fragment });
       const flashAlpha = rarity.weight <= 4 ? 0.65 : 0.18;
       setFlash({ color: rarity.color, alpha: flashAlpha });
