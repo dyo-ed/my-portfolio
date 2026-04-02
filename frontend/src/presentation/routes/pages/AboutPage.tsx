@@ -1,6 +1,7 @@
 import AboutGachaSection from "../../components/gacha/AboutGachaSection";
 import AboutMe from "../../components/about_me/aboutMe";
 import CertificationCards from "../../components/credentials/credentials";
+import AchievementTimeline from "../../components/timeline/timeline";
 import { aboutStyles } from "../../../utils/constants/aboutConstant";
 
 export default function AboutPage() {
@@ -10,6 +11,8 @@ export default function AboutPage() {
       <AboutMe />
       <div style={{ width: "100%", height: "1px", background: "rgba(255,255,255,0.08)", flexShrink: 0 }} />
       <CertificationCards />
+      <div style={{ width: "100%", height: "1px", background: "rgba(255,255,255,0.08)", flexShrink: 0 }} />
+      <AchievementTimeline />
     </section>
   );
 }

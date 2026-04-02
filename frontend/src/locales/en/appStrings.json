@@ -181,6 +181,15 @@
       "eyebrow": "// CERTIFICATIONS",
       "heading": "CREDENTIALS",
       "blinkCursor": "_"
+    },
+    "timeline": {
+      "eyebrow": "// ACHIEVEMENT_LOG",
+      "headingLine1": "TIMELINE",
+      "headingLine2": "OF",
+      "headingLine3": "IMPACT",
+      "bgNum": "TL",
+      "scrollHint": "↕ DRAG OR SCROLL",
+      "highlightBadge": "★ HIGHLIGHT"
     }
   },
   "boot": {
