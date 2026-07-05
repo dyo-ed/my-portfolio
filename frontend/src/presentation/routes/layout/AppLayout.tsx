@@ -1,4 +1,5 @@
 import React from "react";
+import BootAnimation from "../../components/boot/BootAnimation";
 import appStrings from "../../../locales/en/appStrings.json";
 import FooterView from "../../components/footer/footerView";
 import GlobalCursor from "../../components/cursor/GlobalCursor";
@@ -13,8 +14,15 @@ export default function AppLayout() {
   const { activeSection, currentTime, onRouteTo } = useHeaderModel(appStrings.header);
   const location = useLocation();
 
-  // Always scroll to top when navigating between pages.
-  // (Prevents landing mid-page when you were previously scrolled down.)
+  const [showBoot, setShowBoot] = React.useState<boolean>(() => {
+    try {
+      return typeof window !== "undefined" && sessionStorage.getItem("bootPlayed") !== "1";
+    } catch {
+      return false;
+    }
+  });
+
+  // Smooth scroll to top when navigating between pages (back/forward or tab change).
   React.useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, [location.key]);
@@ -29,6 +37,16 @@ export default function AppLayout() {
 
   return (
     <div className="app-shell">
+      {showBoot && (
+        <BootAnimation
+          onComplete={() => {
+            try {
+              sessionStorage.setItem("bootPlayed", "1");
+            } catch {}
+            setShowBoot(false);
+          }}
+        />
+      )}
       {/* <StarsBackground /> */}
       <GlobalCursor />
       <SelectionLayer />

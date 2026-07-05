@@ -38,11 +38,17 @@ export function useHeaderModel(header: HeaderStrings): HeaderModel {
 
   const onRouteTo = useCallback(
     (id: string, label: string) => {
-      // `id` is treated as a route id ("" for home).
-      navigate(id ? `/${id}` : "/");
+      const path = id ? `/${id}` : "/";
+      const isSameRoute = location.pathname === path;
+
+      navigate(path);
       setActiveSection(label);
+
+      if (isSameRoute) {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      }
     },
-    [navigate]
+    [location.pathname, navigate],
   );
 
   return {

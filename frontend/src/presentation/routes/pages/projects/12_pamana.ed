@@ -1,0 +1,26 @@
+project-details = {
+	active: true,
+	featured: false,
+	status: "ARCHIVED",
+	title:"PAMANA",
+	subtitle:"AI-powered itinerary creator that generates personalized travel plans based on user preferences, budget, and interests."
+	hero-image:"/hero-pamana.png",
+	stats:[
+		{ label: "NODES RENDERED", value: "1.0M+" },
+		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
+		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+	  ],
+	client-type:"COMPETITION",
+	date:"FEBRUARY 2026",
+	technologies:["REACT", "ARTIFICIAL INTELLIGENCE"],
+	links: [
+		{ label: "VIEW REPOSITORY", href: "#" },
+		{ label: "LIVE DEMO", href: "#" },
+	  ],
+	bestFitService: {
+		icon: "◆",
+		title: "NATIVE APP DEVELOPMENT",
+		subtitle: "High-performance apps built close to the metal, tuned for the platform they ship on.",
+		link: "#"
+	}
+}

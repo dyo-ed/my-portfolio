@@ -1,0 +1,26 @@
+project-details = {
+	active: false,
+	featured: false,
+	status: "OSS",
+	title:"ROOMBHIE THE ROOMBA",
+	subtitle:""
+	hero-image:"",
+	stats:[
+		{ label: "NODES RENDERED", value: "1.0M+" },
+		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
+		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+	  ],
+	client-type:"",
+	date:"JANUARY 2025",
+	technologies:["C", "PYTHON"],
+	links: [
+		{ label: "VIEW REPOSITORY", href: "#" },
+		{ label: "LIVE DEMO", href: "#" },
+	  ],
+	bestFitService: {
+		icon: "◆",
+		title: "NATIVE APP DEVELOPMENT",
+		subtitle: "High-performance apps built close to the metal, tuned for the platform they ship on.",
+		link: "#"
+	}
+}

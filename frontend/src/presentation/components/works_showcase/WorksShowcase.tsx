@@ -32,6 +32,18 @@ export default function WorksShowcase() {
     <section style={styles.section} aria-label="Selected Works">
       <style>{CSS}</style>
 
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          pointerEvents: "none",
+          backgroundImage:
+            "linear-gradient(#1a1a1a 1px,transparent 1px),linear-gradient(90deg,#1a1a1a 1px,transparent 1px)",
+          backgroundSize: "48px 48px",
+          opacity: 0.25,
+        }}
+      />
+
       {/* ── HEADER ── */}
       <div style={styles.header}>
         <span style={styles.label}>{worksShowcase.label}</span>
