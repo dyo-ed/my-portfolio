@@ -1,0 +1,26 @@
+project-details = {
+	active: false,
+	featured: false,
+	status: "",
+	title:"E-TALA",
+	subtitle:""
+	hero-image:"/hero-etala.png",
+	stats:[
+		{ label: "NODES RENDERED", value: "1.0M+" },
+		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
+		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+	  ],
+	client-type:"",
+	date:"MARCH 2024",
+	technologies:["JAVA", "ANDROID STUDIO"],
+	links: [
+		{ label: "VIEW REPOSITORY", href: "#" },
+		{ label: "LIVE DEMO", href: "#" },
+	  ],
+	bestFitService: {
+		icon: "◆",
+		title: "NATIVE APP DEVELOPMENT",
+		subtitle: "High-performance apps built close to the metal, tuned for the platform they ship on.",
+		link: "#"
+	}
+}

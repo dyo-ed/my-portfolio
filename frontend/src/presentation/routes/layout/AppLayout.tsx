@@ -22,8 +22,7 @@ export default function AppLayout() {
     }
   });
 
-  // Always scroll to top when navigating between pages.
-  // (Prevents landing mid-page when you were previously scrolled down.)
+  // Smooth scroll to top when navigating between pages (back/forward or tab change).
   React.useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, [location.key]);

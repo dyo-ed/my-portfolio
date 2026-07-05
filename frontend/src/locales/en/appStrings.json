@@ -109,30 +109,30 @@
     },
     "worksShowcase": {
       "label": "// SELECTED_WORK",
-      "headingLine1": "THINGS I",
-      "headingLine2": "SHIPPED",
+      "headingLine1": "DREAMS TO",
+      "headingLine2": "REALITY",
       "subtext": "HOVER TO EXPAND · {count} PROJECTS",
       "viewCta": "VIEW ↗"
     },
     "reviewsCarousel": {
-      "label": "// CLIENT_REVIEWS",
+      "label": "// REVIEWS_&_REFERENCE",
       "headingLine1": "WHAT THEY",
       "headingLine2": "SAY ABOUT",
-      "headingLine3": "THE WORK",
+      "headingLine3": "THE DREAMER",
       "reviewsCount": "{count} REVIEWS",
       "avgRating": "5.0 AVG RATING"
     },
     "ctaSection": {
       "headlineLine1": "LET'S",
-      "headlineLine2": "TALK",
-      "headlineLine3": "IDEAS."
+      "headlineLine2": "DREAM",
+      "headlineLine3": "TOGETHER."
     }
   },
   "contact": {
     "sectionLabel": "// LET_S_TALK",
     "titleLine1": "GOT A",
-    "titleHighlight": "PROBLEM",
-    "titleLine3": "TO SOLVE?",
+    "titleHighlight": "DREAM",
+    "titleLine3": "TO SHARE?",
     "description": "I'm open to full-time roles, long-term contracts, and interesting consulting work. I don't do vague specs or waterfall timelines.",
     "emailLabel": "EMAIL",
     "githubLabel": "GITHUB",
@@ -153,8 +153,29 @@
       }
     ],
     "messageLabel": "MESSAGE",
-    "messagePlaceholder": "// describe_the_problem",
+    "messagePlaceholder": "// describe_the_dream",
     "sendButtonLabel": "SEND \u2192"
+  },
+  "projects": {
+    "eyebrow": "// PROJECT_INDEX",
+    "titleLine1": "SELECTED",
+    "titleLine2": "WORK",
+    "titleLine3": "LOG",
+    "entriesCount": "{count} ENTRIES",
+    "featuredBadge": "★ FEATURED",
+    "arrowGlyph": "→",
+    "railLabel": "SCRL",
+    "filters": {
+      "all": "ALL",
+      "active": "ACTIVE",
+      "oss": "OSS",
+      "archived": "ARCHIVED"
+    },
+    "statusLabels": {
+      "ACTIVE": "ACTIVE",
+      "OSS": "OSS",
+      "ARCHIVED": "ARCHIVED"
+    }
   },
   "about": {
     "gacha": {

@@ -1,4 +1,31 @@
 import type { CSSProperties } from "react";
+import profileImage from "../../presentation/assets/profile-img.jpg";
+import profileImageMobile from "../../presentation/assets/profile-img_small.jpg";
+import certiificateCertiport from "../../presentation/assets/cert-certiport.jpg";
+import certificateCisco from "../../presentation/assets/cert-cisco.jpg";
+import certificateQcsp from "../../presentation/assets/cert-qcsp.jpg";
+import certificateDict from "../../presentation/assets/cert-dict.jpg";
+import certificateJpia from "../../presentation/assets/cert-jpia.jpg";
+import timelineEnrolled from "../../presentation/assets/tl-enrolled.jpg";
+import tl2 from "../../presentation/assets/tl-2.jpg";
+import tl3 from "../../presentation/assets/tl-3.jpg";
+import tl4 from "../../presentation/assets/tl-4.jpg";
+import tl5 from "../../presentation/assets/tl-5.jpg";
+import tl6 from "../../presentation/assets/tl-6.jpg";
+import tl7 from "../../presentation/assets/tl-7.jpg";
+import tl8 from "../../presentation/assets/tl-8.png";
+import tl9 from "../../presentation/assets/tl-9.jpg";
+import tl10 from "../../presentation/assets/tl-10.jpg";
+import tl11 from "../../presentation/assets/tl-11.jpg";
+import tl12 from "../../presentation/assets/tl-12.jpg";
+import tl13 from "../../presentation/assets/tl-13.jpg";
+import tl14 from "../../presentation/assets/tl-14.jpg";
+import tl15 from "../../presentation/assets/tl-15.png"
+import tl16 from "../../presentation/assets/tl-16.jpg";
+import tl17 from "../../presentation/assets/tl-17.jpg";
+import tl18 from "../../presentation/assets/tl-18.png";
+import tl19 from "../../presentation/assets/tl-19.jpg";
+
 
 export type CertItem = {
   id: string;
@@ -15,76 +42,64 @@ export type CertItem = {
 
 export const CERTS: CertItem[] = [
   {
-    id: "01",
-    issuer: "AWS",
-    title: "Solutions Architect",
-    subtitle: "Professional",
-    date: "MAR 2024",
-    expires: "MAR 2027",
-    credId: "AWS-SAP-00291847",
-    img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&q=80",
+    id: "05",
+    issuer: "CERTIPORT",
+    title: "ARTIFICIAL INTELLIGENCE",
+    subtitle: "IT SPECIALIST",
+    date: "DEC 2025",
+    expires: "DEC 2030",
+    credId: "0ddbb2f2-fca4-412a-ab42-0c1c5c465fc1",
+    img: certiificateCertiport,
     accent: "#FF9900",
-    desc: "Validates advanced technical skills designing distributed systems on AWS. Covers multi-account strategy, hybrid networking, cost optimization, and high-availability architecture at scale.",
-  },
-  {
-    id: "02",
-    issuer: "Google",
-    title: "Professional Cloud",
-    subtitle: "DevOps Engineer",
-    date: "JAN 2024",
-    expires: "JAN 2026",
-    credId: "GCP-PCDE-00748291",
-    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&q=80",
-    accent: "#00ff88",
-    desc: "Demonstrates ability to build CI/CD pipelines, manage service reliability, and apply SRE practices across Google Cloud infrastructure using Kubernetes and Cloud Build.",
-  },
-  {
-    id: "03",
-    issuer: "CKAD",
-    title: "Certified Kubernetes",
-    subtitle: "Application Developer",
-    date: "NOV 2023",
-    expires: "NOV 2025",
-    credId: "CKAD-2300-047821",
-    img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=500&q=80",
-    accent: "#326CE5",
-    desc: "Hands-on certification proving competency in designing, building, and deploying cloud-native applications using Kubernetes. Covers workloads, services, networking, and observability.",
+    desc: "Candidates for this exam are AI enabled learners and are prepared for the professional use of AI by understanding how AI can be used to solve problems.",
   },
   {
     id: "04",
-    issuer: "HashiCorp",
-    title: "Terraform Associate",
-    subtitle: "003",
-    date: "SEP 2023",
-    expires: "SEP 2025",
-    credId: "HC-TF-003-091923",
-    img: "https://images.unsplash.com/photo-1520869562399-e772f042f422?w=500&q=80",
-    accent: "#7B42BC",
-    desc: "Confirms proficiency in infrastructure-as-code concepts using Terraform. Covers state management, modules, workspace strategy, and provider configuration for cloud provisioning.",
+    issuer: "CISCO",
+    title: "INTRODUCTION TO AI",
+    subtitle: "ARTIFICIAL INTELLIGENCE",
+    date: "OCT 2025",
+    expires: "N/A",
+    credId: "b3e45108-cefa-4b4e-a8b1-be7849197fc4",
+    img: certificateCisco,
+    accent: "#00ff88",
+    desc: "The learner will have practiced using AI enabled features on free apps, such as photo apps, translation services, and chatbots. They will have had in depth practice in prompting a chatbot, and understand fundamentals of how the models work, which informs how they prompt chatbots.",
   },
   {
-    id: "05",
-    issuer: "Linux Foundation",
-    title: "Certified System",
-    subtitle: "Administrator",
-    date: "JUN 2023",
-    expires: "JUN 2025",
-    credId: "LF-LFCS-062023-A4",
-    img: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=500&q=80",
+    id: "03",
+    issuer: "QCSP",
+    title: "QUANTUM COMPUTING & BLOCKCHAIN",
+    subtitle: "LECTURE SERIES",
+    date: "JUL 2025",
+    expires: "N/A",
+    credId: "89150281605285",
+    img: certificateQcsp,
+    accent: "#ff4d4d",
+    desc: "Organized by the Quantum Computing Society of the Philippines (QCSP) and DataProtect-SIERRA Project from DOST-Advanced Science and Technology Institute",
+  },
+  {
+    id: "02",
+    issuer: "DICT",
+    title: "Fundamentals of Pitching",
+    subtitle: "",
+    date: "MAR 2025",
+    expires: "N/A",
+    credId: "R4A_IIDB_DICT_R4A_2026134",
+    img: certificateDict,
     accent: "#FFE600",
-    desc: "Validates essential Linux system administration skills including storage management, user administration, networking, service configuration, and security hardening in real environments.",
+    desc: "for attending FUNDAMENTALS OF PITCHING and STARTUP PROJECTS organized by the Department of Informations and Communications Technology through ICT Industry Development Bureau",
   },
   {
-    id: "06",
-    issuer: "MongoDB",
-    title: "Associate Developer",
-    subtitle: "Node.js",
-    date: "FEB 2023",
-    expires: "FEB 2026",
-    credId: "MDB-DEV-022023-NJ",
-    img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=500&q=80",
-    accent: "#00ED64",
-    desc: "Covers MongoDB CRUD operations, aggregation pipelines, indexing strategies, and data modeling patterns within Node.js applications using the official MongoDB driver and Mongoose.",
+    id: "01",
+    issuer: "JPIA",
+    title: "COMPANY & MOTIVATIONAL TALKS",
+    subtitle: "23rd GENERAL ASSEMBLY",
+    date: "JAN 2022",
+    expires: "N/A",
+    credId: "GA-CMT-0164",
+    img: certificateJpia,
+    accent: "#8b5cf6",
+    desc: "for actively participating during the Company and Motivational Talks of the 23rd General Assembly with the Theme: PERLAS: Ang Reyna Ng Mga Hiyas of the National Federation of Junior Philippine Institute of Accountants - Region IV",
   },
 ];
 
@@ -272,8 +287,8 @@ export const GACHA_FRAGMENTS: GachaFragment[] = [
 export const PROFILE = {
   name: "JOED MERAÑA",
   role: "SOFTWARE ENGINEER",
-  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
-  imageMobile: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80",
+  image: profileImage,
+  imageMobile: profileImageMobile,
   description:
     "I build systems that scale, interfaces that breathe, and abstractions that last. Six years turning complexity into clarity — from distributed databases to pixel-perfect UIs. I care deeply about craft, and I ship.",
 };
@@ -290,12 +305,12 @@ export const ATTRIBUTES = [
 export const SOCIALS = [
   {
     label: "GitHub",
-    href: "https://github.com/alexdev",
+    href: "https://github.com/dyo-ed",
     id: "github",
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/alexdev",
+    href: "https://www.linkedin.com/in/joedmerana",
     id: "linkedin",
   },
 ];
@@ -483,74 +498,194 @@ export type AchievementItem = {
 
 export const ACHIEVEMENTS: AchievementItem[] = [
   {
-    id: "01",
-    date: "MAR 2025",
-    title: "LAUNCHED NEURAL_MESH",
+    id: "19",
+    date: "JUN 2026",
+    title: "JUST GRADUATED",
     description:
-      "Shipped a real-time distributed neural network visualization engine capable of rendering 1M+ nodes at a sustained 60fps. Featured on HackerNews front page with 800+ upvotes.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
-    tags: ["RUST", "WEBGL", "WASM"],
+      "Graduated on Laguna State Polytechnic University with the awards: Cultural Service Award, Emerging Digital Innovators Award, Emerging Cybersecurity Professionals Award, and Outstanding Research Presentation Award",
+    image: tl19,
+    tags: ["BEGINNING OF ANOTHER JOURNEY"],
     highlight: true,
   },
   {
-    id: "02",
-    date: "NOV 2024",
-    title: "OPEN-SOURCED VOID_DB",
+    id: "18",
+    date: "APR 2026",
+    title: "VOLUNTEER BACKEND DEVELOPER",
     description:
-      "Released a distributed key-value store implementing the Raft consensus algorithm. Reached 2.4K GitHub stars in the first month.",
-    image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&q=80",
-    tags: ["GO", "RAFT", "GRPC"],
+      "Started as a Volunteer Backend Developer for Quantum Computing Society of the Philippines for their project",
+    image: tl18,
+    tags: ["VOLUNTEER", "DEVELOPMENT"],
     highlight: false,
   },
   {
-    id: "03",
-    date: "JUL 2024",
-    title: "BYTECODE VM SHIPPED",
+    id: "17",
+    date: "APR 2026",
+    title: "INTERNATIONAL CONFERENCE",
     description:
-      "Published a custom bytecode virtual machine with JIT compiler targeting LLVM IR. Benchmarked 3x faster than equivalent interpreted runtimes.",
-    image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=600&q=80",
-    tags: ["C++", "LLVM", "JIT"],
+      "We presented our Thesis in International Conference on Frontiers of Engineering and Emerging Technologies (FET'26)",
+    image: tl17,
+    tags: ["THESIS", "INTERNATION CONFERENCE"],
     highlight: false,
   },
   {
-    id: "04",
-    date: "FEB 2024",
-    title: "STAFF ENGINEER PROMOTION",
+    id: "16",
+    date: "APR 2026",
+    title: "INTERCISKWELA'S BATANG TECHNO",
     description:
-      "Promoted to Staff Software Engineer after leading the re-architecture of the core data pipeline, cutting infrastructure costs by 38% while doubling throughput.",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80",
-    tags: ["LEADERSHIP", "INFRA"],
+      "I participated in Batangas State University's Batang Techno Programming Competition",
+    image: tl16,
+    tags: ["PROGRAMMING"],
+    highlight: false,
+  },
+  {
+    id: "15",
+    date: "MAR 2026",
+    title: "DOST PROJECT LODIXR",
+    description:
+      "I started my On-The-Job Training (OJT) in Department of Science and Technology under the Project LODIxR with the role Full Stack Developer",
+    image: tl15,
+    tags: ["INTERNSHIP"],
     highlight: true,
   },
   {
-    id: "05",
-    date: "SEP 2023",
-    title: "SIGNAL_MAP GOES LIVE",
+    id: "14",
+    date: "FEB 2026",
+    title: "TOURISM STARTUP",
     description:
-      "Launched IoT telemetry platform processing 50K+ events per second with real-time anomaly detection. Deployed across 3 continents with 99.97% uptime.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80",
-    tags: ["PYTHON", "KAFKA", "REACT"],
+      "We participated in CHED & DOT's Tourism Startup and won 4th Place with our MVP, PAMANA",
+    image: tl14,
+    tags: ["STARTUP", "PITCHING"],
     highlight: false,
   },
   {
-    id: "06",
-    date: "MAY 2022",
-    title: "FOUNDED DEVLAB COLLECTIVE",
+    id: "13",
+    date: "JAN 2026",
+    title: "THESIS DEFENDED",
     description:
-      "Co-founded an open-source collective with 120+ active contributors across 18 countries. Hosts bi-monthly virtual workshops on systems programming.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80",
-    tags: ["OSS", "COMMUNITY"],
+      "successfully defended our Thesis, Shroomify: Image-based classification using Modified Feature Engineering and Artificial Neural Networks",
+    image: tl13,
+    tags: ["THESIS", "MACHINE LEARNING"],
+    highlight: true,
+  },
+  {
+    id: "12",
+    date: "DEC 2025",
+    title: "IT SPECIALIST - ARTIFICIAL INTELLIGENCE",
+    description:
+      "Received the certification from Certiport - A Pearson VUE Business",
+    image: tl12,
+    tags: ["ARTIFICIAL INTELLIGENCE", "CERTIFICATION"],
+    highlight: false,
+  },
+  {
+    id: "11",
+    date: "NOV 2025",
+    title: "TRON CYBER DEFENSE CHAMPION",
+    description:
+      "won as the Champion of the Qualifying Cyber Defense Exercise Challenge TRON 2026",
+    image: tl11,
+    tags: ["CYBERSECURITY", "CAPTURE-THE-FLAG"],
+    highlight: true,
+  },
+  {
+    id: "10",
+    date: "OCT 2025",
+    title: "STRASUC 2025",
+    description:
+      "represented our university in Chorale Competition at Romblon University for Southern Tagalog Regional Association of State Universities and Colleges (STRASUC) Culture and Arts Festival",
+    image: tl10,
+    tags: ["AFK", "AWAY FROM KEYBOARD"],
+    highlight: false,
+  },
+  {
+    id: "09",
+    date: "JUL 2025",
+    title: "HACK4APROGRESS",
+    description:
+      "secured a spot as one of the top 8 finalists in the second Hack4AProgress 2025 competition hosted by the Department of Science and Technology-Calabarzon",
+    image: tl9,
+    tags: ["HACKATHON"],
+    highlight: false,
+  },
+  {
+    id: "08",
+    date: "MAY 2025",
+    title: "CCS WEEK - PROGRAMMING COMPETITION",
+    description:
+      "During CCS Week 2025, I participated in the programming competition and won 1st Runner Up",
+    image: tl8,
+    tags: ["PROGRAMMING"],
     highlight: false,
   },
   {
     id: "07",
-    date: "JAN 2020",
-    title: "FIRST FULL-TIME ROLE",
+    date: "MAY 2025",
+    title: "MY FIRST HACKATHON",
     description:
-      "Joined Meridian Systems as a Software Engineer. Shipped first production feature — a real-time notification engine — within 3 weeks of starting.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80",
-    tags: ["BEGINNINGS"],
+      "We participated in Quantum Computing Society of the Philippine's Hackathon and won 1st Runner Up for our MVP, Wer's Paldo",
+    image: tl7,
+    tags: ["HACKATHON", "BLOCKCHAIN"],
+    highlight: true,
+  },
+  {
+    id: "06",
+    date: "NOV 2024",
+    title: "UMAK 13TH ITOLYMPICS",
+    description:
+      "During the University of Makati's 13th ITOlympics 2024, I participated in the Java programming competition representing our University.",
+    image: tl6,
+    tags: ["JAVA", "PROGRAMMING"],
     highlight: false,
+  },
+  {
+    id: "05",
+    date: "MAY 2024",
+    title: "PROGRAMMING CHAMPION",
+    description:
+      "During CCS Week 2024, I participated in the programming competition and emerged as the winner.",
+    image: tl5,
+    tags: ["PROGRAMMING"],
+    highlight: true,
+  },
+  {
+    id: "04",
+    date: "APR 2024",
+    title: "TOPCIT 2024",
+    description:
+      "I represented our university alongside students from various universities nationwide. This test, known as the Test of Practical Competency in IT",
+    image: tl4,
+    tags: ["INFORMATION TECHNOLOGY"],
+    highlight: false,
+  },
+  {
+    id: "03",
+    date: "NOV 2023",
+    title: "UMAK 12TH ITOLYMPICS",
+    description:
+      "During the University of Makati's 12th ITOlympics 2023, I participated in the Java programming competition representing our University. ",
+    image: tl3,
+    tags: ["JAVA", "PROGRAMMNG"],
+    highlight: false,
+  },
+  {
+    id: "02",
+    date: "MAY 2023",
+    title: "MY FIRST COMPETITION",
+    description:
+      "I joined my very first programming competition in LSPU CCS Week and won 2nd Runner Up",
+    image: tl2,
+    tags: ["PROGRAMMING"],
+    highlight: false,
+  },
+  {
+    id: "01",
+    date: "AUG 2022",
+    title: "ENROLLED AS COMPUTER SCIENCE",
+    description:
+      "Made my decision to shift courses from BS Accountancy to BS Computer Science at Laguna State Polytechnic University",
+    image: timelineEnrolled,
+    tags: ["BEGINNING OF MY JOURNEY"],
+    highlight: true,
   },
 ];
 

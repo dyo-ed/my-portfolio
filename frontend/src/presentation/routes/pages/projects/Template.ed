@@ -1,0 +1,39 @@
+project-details = {
+	active: true,
+	featured: true,
+	status: "ACTIVE",
+	title:"NEURAL_MESH",
+	subtitle:"Real-time distributed graph renderer"
+	hero-image:"https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1400&q=80",
+	stats:[
+		{ label: "NODES RENDERED", value: "1.0M+" },
+		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
+		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+	  ],
+	client-type:"STARTUP / SEED",
+	date:"MARCH 2025",
+	technologies:["RUST","WEBGL","WASM","WGPU","TYPESCRIPT"],
+	links: [
+		{ label: "VIEW REPOSITORY", href: "#" },
+		{ label: "LIVE DEMO", href: "#" },
+	  ],
+	bestFitService: {
+		icon: "◆",
+		title: "NATIVE APP DEVELOPMENT",
+		subtitle: "High-performance apps built close to the metal, tuned for the platform they ship on.",
+		link: "#"
+	}
+}
+
+content = {
+	// This should display according to what comes first here
+	highlight: "Most graph visualizers fall over somewhere between ten and a hundred thousand nodes. NEURAL_MESH was built to keep going — a rendering engine designed to hold a real, sustained 60fps at over a million nodes, on ordinary consumer hardware.",
+	title: "THE PROBLEM",
+	text: "Distributed systems produce graphs that outgrow every visualization tool built for them. Force-directed layouts choke past a few thousand nodes, and most WebGL wrappers assume you're rendering a scene, not a live, constantly-mutating dataset. Watching a real production mesh meant either sampling it down to something misleading, or waiting seconds per frame.",
+	title: "THE APPROACH",
+	text: "The core insight was to stop treating nodes as individual draw calls. Everything is batched into instanced geometry buffers on the GPU, with layout computation offloaded to a WASM module compiled from Rust. The CPU side only ever touches diffs — new nodes, moved edges, changed weights — never the full graph, which is what makes sustained frame times possible even as the mesh grows underneath it.",
+	quote: "The moment it clicked was watching a million-node graph re-layout itself in real time and the frame counter not even flinching.",
+	image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1400&q=80",
+	title: "WHAT SHIPPED",
+	text: "The result handles live reconnections, weighted edge coloring, and click-to-inspect on graphs an order of magnitude larger than anything the team had visualized before. It shipped as an open, embeddable library, and the launch post ended up on the Hacker News front page for most of a day."
+}
