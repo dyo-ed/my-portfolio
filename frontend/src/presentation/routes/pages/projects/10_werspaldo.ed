@@ -1,21 +1,17 @@
 project-details = {
 	active: false,
 	featured: false,
-	status: "",
+	status: "ARCHIVED",
 	title:"WER'S PALDO",
 	subtitle:""
 	hero-image:"/hero-wp.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "BLOCKCHAIN, METAMASK, REACT, TYPESCRIPT" },
 	  ],
 	client-type:"COMPETITION",
 	date:"JULY 2025",
 	technologies:["BLOCKCHAIN", "REACT"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
 	  ],
 	bestFitService: {
 		icon: "◆",

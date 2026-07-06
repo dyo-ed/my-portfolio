@@ -6,16 +6,14 @@ project-details = {
 	subtitle:""
 	hero-image:"/hero-rtr.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "C, PYTHON" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "Visual Studio" },
 	  ],
 	client-type:"",
 	date:"JANUARY 2025",
 	technologies:["C", "PYTHON"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
+		{ label: "VIEW REPOSITORY", href: "https://github.com/Placidoo/RoombaRoute" },
 	  ],
 	bestFitService: {
 		icon: "◆",

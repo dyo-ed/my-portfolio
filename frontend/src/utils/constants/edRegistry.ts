@@ -19,16 +19,13 @@ project-details = {
 	subtitle:"AI-powered itinerary creator that generates personalized travel plans based on user preferences, budget, and interests."
 	hero-image:"/hero-pamana.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "PYTHON, REACT" },
 	  ],
 	client-type:"COMPETITION",
 	date:"FEBRUARY 2026",
 	technologies:["REACT", "ARTIFICIAL INTELLIGENCE"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
+		{ label: "LIVE DEMO", href: "https://www.youtube.com/watch?v=jYWhvRDQadc" },
 	  ],
 	bestFitService: {
 		icon: "◆",
@@ -47,16 +44,15 @@ project-details = {
 	subtitle:"Image-based contamination classification using Modified Feature Engineering and Artificial Neural Networks"
 	hero-image:"/hero-shroomify.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "PYTHON, REACT" },
+		{ label: "AI MODEL", value: "ResNet18, GLCM, and ANN" },
 	  ],
 	client-type:"THESIS",
 	date:"JANUARY 2026",
 	technologies:["PYTHON", "MACHINE LEARNING", "REACT", "TYPESCRIPT"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
+		{ label: "VIEW REPOSITORY", href: "https://github.com/Joed-LSPU/shroomify" },
+		{ label: "LIVE DEMO", href: "https://www.youtube.com/watch?v=oZ36r8-6hLc" },
 	  ],
 	bestFitService: {
 		icon: "◆",
@@ -70,21 +66,17 @@ const RAW_10_werspaldo = `
 project-details = {
 	active: false,
 	featured: false,
-	status: "",
+	status: "ARCHIVED",
 	title:"WER'S PALDO",
 	subtitle:""
 	hero-image:"/hero-wp.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "BLOCKCHAIN, METAMASK, REACT, TYPESCRIPT" },
 	  ],
 	client-type:"COMPETITION",
 	date:"JULY 2025",
 	technologies:["BLOCKCHAIN", "REACT"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
 	  ],
 	bestFitService: {
 		icon: "◆",
@@ -103,16 +95,13 @@ project-details = {
 	subtitle:"Development of an Intelligent Musical Conducting System Integrating Dynamic Hand Gesture Recognition using Convolutional Neural Network"
 	hero-image:"/hero-vs.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "JAVA, PYTHON" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "ANDROID STUDIO" },
 	  ],
-	client-type:"",
+	client-type:"SCHOOL PROJECT",
 	date:"MAY 2025",
 	technologies:["MACHINE LEARNING", "JAVA", "ANROID STUDIO"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
 	  ],
 	bestFitService: {
 		icon: "◆",
@@ -131,16 +120,13 @@ project-details = {
 	subtitle:""
 	hero-image:"/hero-codenames.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "REACT, TYPESCRIPT" },
 	  ],
-	client-type:"",
+	client-type:"HOBBY",
 	date:"",
 	technologies:["REACT", "TYPESCRIPT"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
+		{ label: "LIVE DEMO", href: "https://kowdnames.vercel.app/" },
 	  ],
 	bestFitService: {
 		icon: "◆",
@@ -154,21 +140,18 @@ const RAW_07_pw = `
 project-details = {
 	active: false,
 	featured: true,
-	status: "",
+	status: "ARCHIVED",
 	title:"PIYU WALLET",
 	subtitle:""
 	hero-image:"/hero-piyuwallet.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "JAVA" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "ANDROID STUDIO" },
 	  ],
 	client-type:"",
 	date:"",
 	technologies:["JAVA", "ANDROID STUDIO"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
 	  ],
 	bestFitService: {
 		icon: "◆",
@@ -187,16 +170,14 @@ project-details = {
 	subtitle:""
 	hero-image:"/hero-rtr.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "C, PYTHON" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "Visual Studio" },
 	  ],
 	client-type:"",
 	date:"JANUARY 2025",
 	technologies:["C", "PYTHON"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
+		{ label: "VIEW REPOSITORY", href: "https://github.com/Placidoo/RoombaRoute" },
 	  ],
 	bestFitService: {
 		icon: "◆",
@@ -210,21 +191,18 @@ const RAW_05_itec = `
 project-details = {
 	active: false,
 	featured: false,
-	status: "",
+	status: "ARCHIVED",
 	title:"TYPOGRAPHY ACTIVITY",
 	subtitle:""
 	hero-image:"/hero-itec.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "C++" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "Visual Studio" },
 	  ],
-	client-type:"",
+	client-type:"SCHOOL PROJECT",
 	date:"APRIL 2024",
 	technologies:["C++", "GLFW", "OPENGL"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
 	  ],
 	bestFitService: {
 		icon: "◆",
@@ -238,21 +216,18 @@ const RAW_04_etala = `
 project-details = {
 	active: false,
 	featured: false,
-	status: "",
+	status: "ARCHIVED",
 	title:"E-TALA",
 	subtitle:""
 	hero-image:"/hero-etala.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "JAVA" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "Android Studio" },
 	  ],
-	client-type:"",
+	client-type:"COMPETITION",
 	date:"MARCH 2024",
 	technologies:["JAVA", "ANDROID STUDIO"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
 	  ],
 	bestFitService: {
 		icon: "◆",
@@ -271,16 +246,14 @@ project-details = {
 	subtitle:"Digital banking platform for Laguna State Polytechnic University that enables secure cashless transactions using physical student IDs"
 	hero-image:"/hero-pw1.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "C#" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "Visual Studio" },
 	  ],
 	client-type:"SCHOOL PROJECT",
 	date:"MAY 2023",
 	technologies:["C#"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
+		{ label: "VIEW REPOSITORY", href: "https://github.com/Placidoo/PiyuWallet" },
 	  ],
 	bestFitService: {
 		icon: "◆",
@@ -299,16 +272,13 @@ project-details = {
 	subtitle:"point-of-sale (POS) system designed to simplify order management, billing, and daily operations for karinderias"
 	hero-image:"/hero-cafebistro.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "C#" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "Visual Studio" },
 	  ],
 	client-type:"COMMISSION",
 	date:"DECEMBER 2022",
 	technologies:["C#", "POS"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
 	  ],
 	bestFitService: {
 		icon: "◆",
@@ -327,16 +297,14 @@ project-details = {
 	subtitle:"point-of-sale (POS) system designed to streamline order processing, payments, and sales management for coffee shop"
 	hero-image:"/hero-brewrikat.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "C#" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "Visual Studio" },
 	  ],
 	client-type:"SCHOOL PROJECT",
 	date:"DECEMBER 2022",
 	technologies:["C#", "POS"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "facebook.com" },
-		{ label: "LIVE DEMO", href: "#" },
+		{ label: "VIEW REPOSITORY", href: "https://github.com/Placidoo/Brewrikat" },
 	  ],
 	bestFitService: {
 		icon: "◆",

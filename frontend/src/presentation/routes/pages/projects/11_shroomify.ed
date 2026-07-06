@@ -6,16 +6,15 @@ project-details = {
 	subtitle:"Image-based contamination classification using Modified Feature Engineering and Artificial Neural Networks"
 	hero-image:"/hero-shroomify.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "PYTHON, REACT" },
+		{ label: "AI MODEL", value: "ResNet18, GLCM, and ANN" },
 	  ],
 	client-type:"THESIS",
 	date:"JANUARY 2026",
 	technologies:["PYTHON", "MACHINE LEARNING", "REACT", "TYPESCRIPT"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
+		{ label: "VIEW REPOSITORY", href: "https://github.com/Joed-LSPU/shroomify" },
+		{ label: "LIVE DEMO", href: "https://www.youtube.com/watch?v=oZ36r8-6hLc" },
 	  ],
 	bestFitService: {
 		icon: "◆",

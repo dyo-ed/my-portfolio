@@ -6,16 +6,13 @@ project-details = {
 	subtitle:"Development of an Intelligent Musical Conducting System Integrating Dynamic Hand Gesture Recognition using Convolutional Neural Network"
 	hero-image:"/hero-vs.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "JAVA, PYTHON" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "ANDROID STUDIO" },
 	  ],
-	client-type:"",
+	client-type:"SCHOOL PROJECT",
 	date:"MAY 2025",
 	technologies:["MACHINE LEARNING", "JAVA", "ANROID STUDIO"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
 	  ],
 	bestFitService: {
 		icon: "◆",

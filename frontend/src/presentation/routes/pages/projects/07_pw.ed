@@ -1,21 +1,18 @@
 project-details = {
 	active: false,
 	featured: true,
-	status: "",
+	status: "ARCHIVED",
 	title:"PIYU WALLET",
 	subtitle:""
 	hero-image:"/hero-piyuwallet.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "JAVA" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "ANDROID STUDIO" },
 	  ],
 	client-type:"",
 	date:"",
 	technologies:["JAVA", "ANDROID STUDIO"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
 	  ],
 	bestFitService: {
 		icon: "◆",

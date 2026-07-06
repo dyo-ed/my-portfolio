@@ -1,21 +1,18 @@
 project-details = {
 	active: false,
 	featured: false,
-	status: "",
+	status: "ARCHIVED",
 	title:"TYPOGRAPHY ACTIVITY",
 	subtitle:""
 	hero-image:"/hero-itec.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "PROGRAMMING LANGUAGE", value: "C++" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "Visual Studio" },
 	  ],
-	client-type:"",
+	client-type:"SCHOOL PROJECT",
 	date:"APRIL 2024",
 	technologies:["C++", "GLFW", "OPENGL"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
 	  ],
 	bestFitService: {
 		icon: "◆",
