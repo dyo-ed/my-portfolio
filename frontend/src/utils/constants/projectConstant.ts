@@ -18,6 +18,17 @@ export function projectSlugId(slug: string): string {
   return m ? m[1].padStart(2, "0") : "";
 }
 
+/** Strip optional .ed suffix from a slug or filename. */
+export function normalizeProjectSlug(slugOrEd: string): string {
+  return slugOrEd.replace(/\.ed$/i, "").trim();
+}
+
+/** Deep link to Projects tab with the viewer open for a given .ed slug/file. */
+export function projectViewerLink(slugOrEd: string): string {
+  const slug = normalizeProjectSlug(slugOrEd);
+  return `/projects?open=${encodeURIComponent(slug)}`;
+}
+
 /** Sort projects descending by slug prefix (02 before 01). */
 export function sortProjectsDesc<T extends { slug: string }>(entries: T[]): T[] {
   return [...entries].sort(

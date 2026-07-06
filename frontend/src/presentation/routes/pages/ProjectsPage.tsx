@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect, type CSSProperties } from "react";
+import { useState, useRef, useEffect, useMemo, type CSSProperties } from "react";
+import { useSearchParams } from "react-router-dom";
 import appStrings from "../../../locales/en/appStrings.json";
 import GlitchText from "../../components/glitch_text/glitchText";
 import {
@@ -9,6 +10,7 @@ import {
   projectStyles,
   sortProjectsDesc,
   buildProjectNavLinks,
+  normalizeProjectSlug,
 } from "../../../utils/constants/projectConstant";
 import {
   getAllParsedEdFiles,
@@ -193,13 +195,31 @@ const FILTER_LABELS: Record<ProjectFilter, string> = {
 
 export default function ProjectsPage() {
   const { projects: content } = appStrings;
+  const [searchParams, setSearchParams] = useSearchParams();
 
   // ── data ──────────────────────────────────────────────────────────────────
   const allEntries = sortProjectsDesc(getAllParsedEdFiles());
 
+  const selectedSlug = useMemo(() => {
+    const openParam = searchParams.get("open");
+    if (!openParam) return null;
+    const slug = normalizeProjectSlug(openParam);
+    return getEdBySlug(slug) ? slug : null;
+  }, [searchParams]);
+
+  const openProject = (slug: string) => {
+    setSearchParams({ open: slug });
+  };
+
+  const closeProject = () => {
+    const next = new URLSearchParams(searchParams);
+    next.delete("open");
+    setSearchParams(next, { replace: true });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   // ── state ─────────────────────────────────────────────────────────────────
   const [filter, setFilter] = useState<ProjectFilter>("ALL");
-  const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
   const [prog, setProg] = useState(0);
   const [gridKey, setGridKey] = useState(0);
 
@@ -249,7 +269,7 @@ export default function ProjectsPage() {
   // ── viewer navigation ─────────────────────────────────────────────────────
   const handleNavigate = (id: string) => {
     const next = getEdById(id);
-    if (next) setSelectedSlug(next.slug);
+    if (next) openProject(next.slug);
   };
 
   // ── if a project is selected, render the viewer ───────────────────────────
@@ -262,10 +282,7 @@ export default function ProjectsPage() {
       <ProjectViewer
         data={viewerData}
         projectKey={selectedSlug}
-        onBack={() => {
-          setSelectedSlug(null);
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
+        onBack={closeProject}
         onNavigate={handleNavigate}
       />
     );
@@ -318,7 +335,7 @@ export default function ProjectsPage() {
               key={entry.slug}
               entry={entry}
               index={i}
-              onSelect={setSelectedSlug}
+              onSelect={openProject}
             />
           ))}
         </div>

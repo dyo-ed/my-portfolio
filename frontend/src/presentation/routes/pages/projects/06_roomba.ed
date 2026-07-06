@@ -4,7 +4,7 @@ project-details = {
 	status: "OSS",
 	title:"ROOMBHIE THE ROOMBA",
 	subtitle:""
-	hero-image:"",
+	hero-image:"/hero-rtr.png",
 	stats:[
 		{ label: "NODES RENDERED", value: "1.0M+" },
 		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },

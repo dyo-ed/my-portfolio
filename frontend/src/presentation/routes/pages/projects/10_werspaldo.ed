@@ -4,7 +4,7 @@ project-details = {
 	status: "",
 	title:"WER'S PALDO",
 	subtitle:""
-	hero-image:"",
+	hero-image:"/hero-wp.png",
 	stats:[
 		{ label: "NODES RENDERED", value: "1.0M+" },
 		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import appStrings from "../../../locales/en/appStrings.json";
 import GlitchText from "../glitch_text/glitchText";
 import {
@@ -21,12 +22,24 @@ export default function WorksShowcase() {
     return () => mediaQuery.removeEventListener("change", listener);
   }, []);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, i: number) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    i: number,
+  ) => {
     if (isMobile && hovered !== i) {
       e.preventDefault();
       setHovered(i);
     }
   };
+
+  const cardClassName = (isHovered: boolean, isDeflated: boolean) =>
+    `works-card ${isHovered ? "works-card--open" : ""} ${isDeflated ? "works-card--closed" : ""}`;
+
+  const cardStyle = (bg: string) =>
+    ({
+      "--bg": `url(${bg})`,
+      textDecoration: "none",
+    }) as React.CSSProperties;
 
   return (
     <section style={styles.section} aria-label="Selected Works">
@@ -66,24 +79,19 @@ export default function WorksShowcase() {
         {WORKS.map((work, i) => {
           const isHovered = hovered === i;
           const isDeflated = hovered !== null && !isHovered;
+          const isInternalLink = work.link.startsWith("/");
+          const sharedProps = {
+            draggable: false as const,
+            className: cardClassName(isHovered, isDeflated),
+            onMouseEnter: () => {
+              if (!isMobile) setHovered(i);
+            },
+            onClick: (e: React.MouseEvent<HTMLAnchorElement>) => handleClick(e, i),
+            style: cardStyle(work.bg),
+          };
 
-          return (
-            <a
-              key={i}
-              href={work.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              draggable={false}
-              className={`works-card ${isHovered ? "works-card--open" : ""} ${isDeflated ? "works-card--closed" : ""}`}
-              onMouseEnter={() => {
-                if (!isMobile) setHovered(i);
-              }}
-              onClick={(e) => handleClick(e, i)}
-              style={{
-                "--bg": `url(${work.bg})`,
-                textDecoration: "none",
-              } as React.CSSProperties}
-            >
+          const cardBody = (
+            <>
               {/* index stamp — always visible */}
               <span className="works-card__index">
                 {String(i + 1).padStart(2, "0")}
@@ -115,6 +123,22 @@ export default function WorksShowcase() {
 
               {/* noise grain */}
               <div className="works-card__grain" />
+            </>
+          );
+
+          return isInternalLink ? (
+            <Link key={i} to={work.link} {...sharedProps}>
+              {cardBody}
+            </Link>
+          ) : (
+            <a
+              key={i}
+              href={work.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              {...sharedProps}
+            >
+              {cardBody}
             </a>
           );
         })}

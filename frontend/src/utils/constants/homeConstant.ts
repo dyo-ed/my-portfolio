@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { projectViewerLink } from "./projectConstant";
 import heroShroomify from "../../presentation/assets/hero-shroomify.png";
 import heroPamana from "../../presentation/assets/hero-pamana.png";
 import heroRTR from "../../presentation/assets/hero-rtr.png";
@@ -17,37 +18,37 @@ export const WORKS = [
   {
     title: "SHROOMIFY",
     description: "Image-based contamination classification using Modified Feature Engineering and Artificial Neural Networks",
-    tags: ["PYTHON", ,"MACHINE LEARNING","REACT", "TYPESCRIPT"],
+    tags: ["PYTHON", "MACHINE LEARNING", "REACT", "TYPESCRIPT"],
     bg: heroShroomify,
-    link: "#",
+    link: projectViewerLink("11_shroomify.ed"),
   },
   {
     title: "PAMANA",
     description: "AI-powered itinerary creator that generates personalized travel plans based on user preferences, budget, and interests.",
     tags: ["REACT", "ARTIFICIAL INTELLIGENCE"],
     bg: heroPamana,
-    link: "#",
+    link: projectViewerLink("12_pamana.ed"),
   },
   {
     title: "PIYU_WALLET",
     description: "Digital banking platform for Laguna State Polytechnic University that enables secure cashless transactions using physical student IDs",
     tags: ["JAVA", "ANDROID STUDIO"],
     bg: heroPiyuWallet,
-    link: "#",
+    link: projectViewerLink("07_pw.ed"),
   },
   {
     title: "ROOMBHIE_THE_ROOMBA",
     description: "Terminal-based maze game that teaches programming and problem-solving through code-driven navigation challenges.",
     tags: ["C", "PYTHON"],
     bg: heroRTR,
-    link: "#",
+    link: projectViewerLink("06_roomba.ed"),
   },
   {
     title: "BREWRIKAT",
     description: "Point-Of-Sale (POS) system designed to streamline order processing, payments, and sales management for coffee shop",
     tags: ["C#", "POS"],
     bg: heroBrewrikat,
-    link: "#",
+    link: projectViewerLink("01_brewrikat.ed"),
   },
 ];
 

@@ -73,7 +73,7 @@ project-details = {
 	status: "",
 	title:"WER'S PALDO",
 	subtitle:""
-	hero-image:"",
+	hero-image:"/hero-wp.png",
 	stats:[
 		{ label: "NODES RENDERED", value: "1.0M+" },
 		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
@@ -98,17 +98,17 @@ const RAW_09_virtuosense = `
 project-details = {
 	active: false,
 	featured: false,
-	status: "",
+	status: "ARCHIVED",
 	title:"VIRTUOSENSE",
-	subtitle:""
-	hero-image:"",
+	subtitle:"Development of an Intelligent Musical Conducting System Integrating Dynamic Hand Gesture Recognition using Convolutional Neural Network"
+	hero-image:"/hero-vs.png",
 	stats:[
 		{ label: "NODES RENDERED", value: "1.0M+" },
 		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
 		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
 	  ],
 	client-type:"",
-	date:"",
+	date:"MAY 2025",
 	technologies:["MACHINE LEARNING", "JAVA", "ANROID STUDIO"],
 	links: [
 		{ label: "VIEW REPOSITORY", href: "#" },
@@ -185,7 +185,7 @@ project-details = {
 	status: "OSS",
 	title:"ROOMBHIE THE ROOMBA",
 	subtitle:""
-	hero-image:"",
+	hero-image:"/hero-rtr.png",
 	stats:[
 		{ label: "NODES RENDERED", value: "1.0M+" },
 		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
