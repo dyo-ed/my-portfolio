@@ -14,7 +14,6 @@ export const GlitchText: React.FC<GlitchTextProps> = ({
   animateKey,
 }) => {
   const [display, setDisplay] = useState(text);
-  const [glitching, setGlitching] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const glitchingRef = useRef(false);
 
@@ -31,11 +30,9 @@ export const GlitchText: React.FC<GlitchTextProps> = ({
       globalThis.clearInterval(intervalRef.current);
       intervalRef.current = null;
       glitchingRef.current = false;
-      setGlitching(false);
     }
 
     glitchingRef.current = true;
-    setGlitching(true);
 
     intervalRef.current = globalThis.setInterval(() => {
       if (ticks > 10) {
@@ -44,7 +41,6 @@ export const GlitchText: React.FC<GlitchTextProps> = ({
           intervalRef.current = null;
         }
         setDisplay(text);
-        setGlitching(false);
         glitchingRef.current = false;
         return;
       }

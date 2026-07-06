@@ -35,6 +35,8 @@ function isInteractiveTarget(target: EventTarget | null) {
   return false;
 }
 
+const listenerOptions: AddEventListenerOptions = { capture: true };
+
 export default function SelectionLayer() {
   const [rect, setRect] = useState<Rect | null>(null);
 
@@ -43,7 +45,6 @@ export default function SelectionLayer() {
   const didMoveRef = useRef(false);
   const rafRef = useRef<number | null>(null);
   const lastPointRef = useRef<{ x: number; y: number } | null>(null);
-  const listenerOptions: AddEventListenerOptions = { capture: true };
 
   const cancel = () => {
     draggingRef.current = false;
