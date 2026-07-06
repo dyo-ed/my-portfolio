@@ -191,7 +191,7 @@ export default function ServicesPage() {
       <div className="cs-stage">
         <div className="cs-bg-num">?</div>
         <div className="cs-content">
-          <span className="cs-eyebrow">// STATUS_PENDING</span>
+          <span className="cs-eyebrow">{'// STATUS_PENDING'}</span>
           <h1 className="cs-title">
             <GlitchText text="COMING" /> <span className="y"><GlitchText text="SOON" /></span>
           </h1>
