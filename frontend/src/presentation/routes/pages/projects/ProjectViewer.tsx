@@ -316,9 +316,12 @@ export default function ProjectViewer({
     goTo(`Open the services tab for ${details.bestFitService.title}`);
   };
 
-  // Render content items sequentially as parsed from file
-  const primaryLink = details.links[0] ?? { label: "VIEW REPOSITORY", href: "#" };
-  const secondaryLink = details.links[1] ?? { label: "LIVE DEMO", href: "#" };
+  const visibleLinks = isPlaceholder
+    ? [
+        { label: "VIEW REPOSITORY", href: "#" },
+        { label: "LIVE DEMO", href: "#" },
+      ]
+    : details.links.filter((link) => link.label.trim());
 
   return (
     <div className="pv-root">
@@ -378,10 +381,19 @@ export default function ProjectViewer({
                 </div>
               </div>
             </div>
-            <div className="pv-panel-buttons">
-              <a className="pv-btn primary" href={primaryLink.href}>{primaryLink.label}</a>
-              <a className="pv-btn ghost" href={secondaryLink.href}>{secondaryLink.label}</a>
-            </div>
+            {visibleLinks.length > 0 && (
+              <div className="pv-panel-buttons">
+                {visibleLinks.map((link, i) => (
+                  <a
+                    key={`${link.label}-${i}`}
+                    className={`pv-btn ${i === 0 ? "primary" : "ghost"}`}
+                    href={link.href || "#"}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* best-fit services panel */}

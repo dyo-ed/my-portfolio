@@ -6,16 +6,13 @@ project-details = {
 	subtitle:""
 	hero-image:"/hero-codenames.png",
 	stats:[
-		{ label: "NODES RENDERED", value: "1.0M+" },
-		{ label: "SUSTAINED FRAMERATE", value: "60FPS" },
-		{ label: "HN FRONT PAGE", value: "800+ ⇧" },
+		{ label: "DEVELOPMENT ENVIRONMENT", value: "REACT, TYPESCRIPT" },
 	  ],
-	client-type:"",
+	client-type:"HOBBY",
 	date:"",
 	technologies:["REACT", "TYPESCRIPT"],
 	links: [
-		{ label: "VIEW REPOSITORY", href: "#" },
-		{ label: "LIVE DEMO", href: "#" },
+		{ label: "LIVE DEMO", href: "https://kowdnames.vercel.app/" },
 	  ],
 	bestFitService: {
 		icon: "◆",
