@@ -47,10 +47,12 @@ function ProjectCard({
   entry,
   index,
   onSelect,
+  skipAnim,
 }: {
   entry: ParsedEdEntry;
   index: number;
   onSelect: (slug: string) => void;
+  skipAnim?: boolean;
 }) {
   const { projects: content } = appStrings;
   const cardRef = useRef<HTMLElement>(null);
@@ -66,6 +68,12 @@ function ProjectCard({
     const el = cardRef.current;
     if (!el) return;
 
+    // Coming back from the viewer — show cards instantly, no animation
+    if (skipAnim) {
+      el.classList.add("in-view");
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([e]) => {
         if (e.isIntersecting) {
@@ -78,7 +86,7 @@ function ProjectCard({
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [index]);
+  }, [index, skipAnim]);
 
   return (
     <article
@@ -207,7 +215,10 @@ export default function ProjectsPage() {
     return getEdBySlug(slug) ? slug : null;
   }, [searchParams]);
 
+  const SCROLL_KEY = "projectsPage_scrollY";
+
   const openProject = (slug: string) => {
+    sessionStorage.setItem(SCROLL_KEY, String(window.scrollY));
     setSearchParams({ open: slug });
   };
 
@@ -215,7 +226,6 @@ export default function ProjectsPage() {
     const next = new URLSearchParams(searchParams);
     next.delete("open");
     setSearchParams(next, { replace: true });
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // ── state ─────────────────────────────────────────────────────────────────
@@ -271,6 +281,22 @@ export default function ProjectsPage() {
     const next = getEdById(id);
     if (next) openProject(next.slug);
   };
+
+  // ── restore scroll after returning from viewer ───────────────────────────
+  useEffect(() => {
+    if (selectedSlug) return; // viewer is open, skip
+    const saved = sessionStorage.getItem(SCROLL_KEY);
+    if (saved !== null) {
+      sessionStorage.removeItem(SCROLL_KEY);
+      const y = Number(saved);
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: y, behavior: "instant" as ScrollBehavior });
+      });
+    }
+  }, [selectedSlug]);
+
+  // derived synchronously at render time — key still exists before the effect cleans it up
+  const returningFromViewer = sessionStorage.getItem(SCROLL_KEY) !== null;
 
   // ── if a project is selected, render the viewer ───────────────────────────
   if (selectedSlug) {
@@ -331,11 +357,12 @@ export default function ProjectsPage() {
         <SpectrumRail prog={prog} count={visible.length} />
         <div className="pj-grid" key={gridKey}>
           {visible.map((entry, i) => (
-            <ProjectCard
+          <ProjectCard
               key={entry.slug}
               entry={entry}
               index={i}
               onSelect={openProject}
+              skipAnim={returningFromViewer}
             />
           ))}
         </div>

@@ -213,6 +213,29 @@
       "highlightBadge": "★ HIGHLIGHT"
     }
   },
+  "blog": {
+    "eyebrow": "// BLOG_INDEX",
+    "titleLine1": "FIELD",
+    "titleLine2": "NOTES",
+    "archiveLabel": "// FROM THE ARCHIVE",
+    "refreshLabel": "REFRESH",
+    "refreshAriaLabel": "Refresh posts",
+    "emptyState": "NO POSTS AVAILABLE",
+    "author": "FIELD_NOTES",
+    "avatarLabel": "FN",
+    "expandGlyph": "⤢",
+    "fullPostLabel": "⤢ FULL POST",
+    "imageAriaLabel": "Enlarge image",
+    "lightboxCloseLabel": "Close",
+    "fullPostCloseLabel": "✕ CLOSE",
+    "commentsEmpty": "NO COMMENTS YET — BE THE FIRST TO REPLY.",
+    "commentPlaceholder": "WRITE A COMMENT...",
+    "commentButton": "POST",
+    "commentsLabel": "COMMENTS",
+    "commentAvatarLabel": "YOU",
+    "closeGlyph": "✕",
+    "chevronGlyph": "▾"
+  },
   "boot": {
     "initializing": "INITIALIZING",
     "loadingAssets": "LOADING ASSETS",
