@@ -221,6 +221,21 @@ function GlitchText({ text, animateOnMount = false, animateKey }: GlitchTextProp
   );
 }
 
+function BlogImage({ src, alt, className }: { src: string; alt: string; className: string }) {
+  const [loaded, setLoaded] = useState(false);
+  return (
+    <>
+      <div className={`sf-img-skeleton${loaded ? " loaded" : ""}`} aria-hidden="true" />
+      <img
+        src={src}
+        alt={alt}
+        className={`${className} sf-img-loaded`}
+        onLoad={() => setLoaded(true)}
+      />
+    </>
+  );
+}
+
 function HeartButton({ liked, count, onToggle }: { liked: boolean; count: number; onToggle: () => void }) {
   return (
     <button className={`sf-heart ${liked ? "liked" : ""}`} onClick={onToggle} aria-pressed={liked}>
@@ -381,7 +396,7 @@ function FeedSlide({
               <h2 className="sf-fullpage-title">{post.title}</h2>
 
               <div className="sf-fullpage-img-wrap">
-                <img src={post.image} alt={post.title} className="sf-fullpage-img" />
+                <BlogImage src={post.image} alt={post.title} className="sf-fullpage-img" />
               </div>
 
               {post.text ? <div className="sf-fullpage-text sf-md-body">{renderMarkdown(post.text)}</div> : null}
@@ -422,7 +437,7 @@ function FeedSlide({
           {post.text ? <p className="sf-post-text">{truncateText(post.text, 120)}</p> : null}
 
           <button className="sf-post-img-wrap" onClick={() => setLightbox(true)} aria-label={`${content.imageAriaLabel} ${post.title}`}>
-            <img src={post.image} alt={post.title} className="sf-post-img" />
+            <BlogImage src={post.image} alt={post.title} className="sf-post-img" />
             <span className="sf-post-img-expand">{content.expandGlyph}</span>
           </button>
 
@@ -459,7 +474,7 @@ function SideCard({ post, content, onOpen }: { post: Post; content: typeof appSt
       tabIndex={0}
     >
       <div className="sf-side-img-wrap">
-        <img src={post.image} alt={post.title} className="sf-side-img" />
+        <BlogImage src={post.image} alt={post.title} className="sf-side-img" />
         <span className="sf-side-tag">{post.tag}</span>
       </div>
       <div className="sf-side-body">
@@ -955,7 +970,7 @@ export default function BlogPage() {
                 <h2 className="sf-fullpage-title">{livePost.title}</h2>
 
                 <div className="sf-fullpage-img-wrap">
-                  <img src={livePost.image} alt={livePost.title} className="sf-fullpage-img" />
+                  <BlogImage src={livePost.image} alt={livePost.title} className="sf-fullpage-img" />
                 </div>
 
                 {livePost.text ? <div className="sf-fullpage-text sf-md-body">{renderMarkdown(livePost.text)}</div> : null}

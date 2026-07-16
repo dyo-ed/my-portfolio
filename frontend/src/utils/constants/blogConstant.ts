@@ -42,6 +42,29 @@ export const BLOG_PAGE_STYLES = `
   .sf-refresh-icon.spinning { animation: sf-spin 0.7s linear infinite; }
   @keyframes sf-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
+  /* Image skeleton shimmer */
+  @keyframes sf-shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position:  200% center; }
+  }
+  .sf-img-skeleton {
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      90deg,
+      #141414 25%,
+      #1f1f1f 50%,
+      #141414 75%
+    );
+    background-size: 200% 100%;
+    animation: sf-shimmer 1.4s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.35s ease;
+  }
+  .sf-img-skeleton.loaded { opacity: 0; pointer-events: none; }
+  .sf-img-loaded { position: relative; z-index: 2; }
+
   .sf-username-btn {
     position: absolute; right: 48px; bottom: 80px;
     border: 1px solid #1f1f1f; background: #0c0c0c; color: #bdbdbd;
@@ -140,14 +163,13 @@ export const BLOG_PAGE_STYLES = `
   .sf-left::after {
     content: '';
     position: absolute;
-    left: 0;
-    right: 0;
-    height: 60px;
+    inset: 0;
     pointer-events: none;
     z-index: 5;
+    background: 
+      linear-gradient(to bottom, #0a0a0a 0%, transparent 60px),
+      linear-gradient(to top, #0a0a0a 0%, transparent 60px);
   }
-  .sf-left::after { top: 0; background: linear-gradient(to bottom, #0a0a0a, transparent); }
-  .sf-left::after { bottom: 0; background: linear-gradient(to top, #0a0a0a, transparent); }
   .sf-left-vp {
     position: relative;
     z-index: 1;
