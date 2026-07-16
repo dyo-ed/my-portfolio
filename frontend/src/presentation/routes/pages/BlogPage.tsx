@@ -282,7 +282,6 @@ function FeedSlide({
   onAddComment: (text: string) => void;
 }) {
   const isAnon = !username || username === DEFAULT_USERNAME;
-  const initials = getUserInitials(username);
   const [draft, setDraft] = useState("");
   const [open, setOpen] = useState(false);
   const [lightbox, setLightbox] = useState(false);
@@ -891,7 +890,7 @@ export default function BlogPage() {
           <div className="sf-umodal" onClick={(e) => e.stopPropagation()}>
             <button className="sf-umodal-close" onClick={handleCancelUsername} aria-label="Close">✕</button>
             <div>
-              <span className="sf-umodal-label">// IDENTITY</span>
+              <span className="sf-umodal-label">{"// IDENTITY"}</span>
               <p className="sf-umodal-title">SET USERNAME</p>
             </div>
             <input
